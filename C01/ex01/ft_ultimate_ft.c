@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tomek <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: tszymans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 21:23:45 by tomek             #+#    #+#             */
-/*   Updated: 2023/11/26 21:43:17 by tomek            ###   ########.fr       */
+/*   Created: 2023/11/27 15:53:00 by tszymans          #+#    #+#             */
+/*   Updated: 2023/11/27 15:53:23 by tszymans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 void	ft_ultimat_ft(int *********nbr);
 

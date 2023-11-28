@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tszymans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 15:28:51 by tszymans          #+#    #+#             */
-/*   Updated: 2023/11/27 15:47:31 by tszymans         ###   ########.fr       */
+/*   Created: 2023/11/27 20:10:16 by tszymans          #+#    #+#             */
+/*   Updated: 2023/11/27 20:24:01 by tszymans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_ft(int *nbr);
+int	ft_strlen(char *str);
 
-void	ft_ft(int *nbr)
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (*str != '\0')
 	{
-	*nbr = 42;
+		str++;
+		i++;
+	}
+	return (i);
 }
-
-//int	main(void)
-//{
-//	int	*nbr;
-//	int	num;
 //
-//	nbr = &num;
-//	ft_ft(nbr);
-//	printf("%d", num);
+//#include <stdio.h>
+//printf("ilosc znakow %d\n", i);
+//
+//int	main()
+//{
+//	ft_strlen("aga");
+//
 //}

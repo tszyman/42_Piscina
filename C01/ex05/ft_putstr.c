@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tszymans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 15:28:51 by tszymans          #+#    #+#             */
-/*   Updated: 2023/11/27 15:47:31 by tszymans         ###   ########.fr       */
+/*   Created: 2023/11/27 18:14:46 by tszymans          #+#    #+#             */
+/*   Updated: 2023/11/27 20:11:12 by tszymans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-#include <stdio.h>
+void	ft_putstr(char *str);
 
-void	ft_ft(int *nbr);
-
-void	ft_ft(int *nbr)
+void	ft_putstr(char *str)
+{
+	while (*str != '\0')
 	{
-	*nbr = 42;
+		write(1, str, 1);
+		str++;
+	}
 }
 
-//int	main(void)
+//int	main()
 //{
-//	int	*nbr;
-//	int	num;
-//
-//	nbr = &num;
-//	ft_ft(nbr);
-//	printf("%d", num);
+//	ft_putstr("tomek");
 //}
