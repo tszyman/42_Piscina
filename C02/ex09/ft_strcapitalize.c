@@ -6,7 +6,7 @@
 /*   By: tomek <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 11:45:31 by tomek             #+#    #+#             */
-/*   Updated: 2023/11/28 12:05:45 by tomek            ###   ########.fr       */
+/*   Updated: 2023/11/28 12:17:38 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strlowcase(char *str)
 	}
 	return (str);
 }
-
 
 char	*ft_strcapitalize(char *str)
 {
