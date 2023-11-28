@@ -1,48 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tszymans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 14:55:58 by tszymans          #+#    #+#             */
-/*   Updated: 2023/11/27 14:57:48 by tszymans         ###   ########.fr       */
+/*   Created: 2023/11/23 15:35:58 by tszymans          #+#    #+#             */
+/*   Updated: 2023/11/23 19:51:53 by tszymans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnbr(int nb);
+void	ft_is_negative(int n);
 
 void	ft_putchar(char c)
-{
+	{
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+void	ft_is_negative(int n)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
-	}
-	else if (nb < 0)
+	if (n >= 0)
 	{
-		ft_putchar('-');
-		nb = -nb;
-		ft_putnbr(nb);
-	}
-	else if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_putchar('P');
 	}
 	else
-		ft_putchar(nb + 48);
+	{
+		ft_putchar('N');
+	}
 }
-
-//int	main(void)
-//{
-//	ft_putnbr(-2147483648);
-//}
