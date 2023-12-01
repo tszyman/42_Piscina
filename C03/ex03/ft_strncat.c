@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tomek <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: tszymans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 00:26:53 by tomek             #+#    #+#             */
-/*   Updated: 2023/11/29 00:51:31 by tomek            ###   ########.fr       */
+/*   Created: 2023/11/30 18:26:37 by tszymans          #+#    #+#             */
+/*   Updated: 2023/11/30 18:26:42 by tszymans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	len_dest(char *dest)
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	i;
-	int	len_dst;
+	int				len_dst;
 
 	i = 0;
 	len_dst = len_dest(dest);

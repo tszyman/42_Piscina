@@ -6,11 +6,11 @@
 /*   By: tszymans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:08:59 by tszymans          #+#    #+#             */
-/*   Updated: 2023/11/29 21:19:21 by tszymans         ###   ########.fr       */
+/*   Updated: 2023/12/01 10:38:57 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_strstr(char *str, char *to_find);
 
@@ -24,24 +24,22 @@ char	*ft_strstr(char *str, char *to_find);
 char	*ft_strstr(char *str, char *to_find)
 {
 	unsigned int	i;
-	unsigned int	j;
 
 	i = 0;
-	j = 0;
-	while (str[i] != '\0')
+	if (to_find[i] == '\0')
+		return(str);
+	while (*str)
 	{
-		while (str[i + j] == to_find[j] && str[i + j] != '\0')
-			j++;
-		if (to_find[j] == '\0')
-			return (&str[i]);
-		i++;
-		j = 0;
+		while (str[i] == to_find[i])
+			if (to_find[++i] == '\0')
+				return(str);
+		str++;
 	}
 	return (0);
 }
 //int	main()
 //{
 //	char str[] = "I'm a bit tired.";
-//	char find[] = "tired";
+//	char find[] = "tir";
 //	printf("%s", ft_strstr(str, find));
 //}
