@@ -6,7 +6,7 @@
 /*   By: tszymans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 20:31:15 by tszymans          #+#    #+#             */
-/*   Updated: 2023/12/03 20:45:38 by tszymans         ###   ########.fr       */
+/*   Updated: 2023/12/05 09:47:31 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_checkbase(char *str)
 		if (str[i] <= 32 || str[i] == 127 || str[i] == 43 || str[i] == 45)
 			return (1);
 		j = i + 1;
-		while (j <= len)
+		while (j < len)
 		{
 			if (str[i] == str [j])
 				return (1);
@@ -58,27 +58,23 @@ int	ft_checkbase(char *str)
 void	ft_putnbr_base(int nbr, char *base)
 {
 	int		len;
+	long	nb;
 
+	nb = nbr;
 	len = ft_strlen(base);
 	if (ft_checkbase(base) == 0)
 	{
-		if (nbr == -2147483648)
+		if (nb < 0)
 		{
 			ft_putchar('-');
-			ft_putchar('2');
-			ft_putnbr_base(147483648, base);
+			nb *= -1;
 		}
-		if (nbr < 0)
+		if (nb < len)
+			ft_putchar(base[nb]);
+		if (nb >= len)
 		{
-			ft_putchar('-');
-			nbr *= -1;
-		}
-		if (nbr < len)
-			ft_putchar(base[nbr]);
-		if (nbr >= len)
-		{
-			ft_putnbr_base(nbr / len, base);
-			ft_putnbr_base(nbr % len, base);
+			ft_putnbr_base(nb / len, base);
+			ft_putnbr_base(nb % len, base);
 		}
 	}
 }
@@ -88,7 +84,7 @@ int	main(void)
 {
 	//binary
 	printf("%s\n", "********binary********");
-	ft_putnbr_base(-2, "01");
+	ft_putnbr_base(-2147483648, "01");
 	printf("\n");
 	ft_putnbr_base(1, "01");
 	printf("\n");
