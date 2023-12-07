@@ -6,7 +6,7 @@
 /*   By: tszymans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:10:06 by tszymans          #+#    #+#             */
-/*   Updated: 2023/12/05 19:30:10 by tszymans         ###   ########.fr       */
+/*   Updated: 2023/12/07 13:31:26 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,36 +39,37 @@ void	ft_swap(char **s1, char **s2)
 {
 	char	*helper;
 
-	helper = *s1;
-	*s1 = *s2;
-	*s2 = helper;
+	helper = *s2;
+	*s2 = *s1;
+	*s1 = helper;
 }
 
 int	main(int argc, char **argv)
 {
 	int	i;
 	int	j;
+	int k;
 
 	i = 1;
-	while (i < argc - 1)
+	while (i < argc)
 	{
 		j = 1;
-		while (j < argc - 1)
+		while (j < argc - i)
 		{
 			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
 			{
 				ft_swap(&argv[j], &argv[j + 1]);
 			}
-			j++;
+		j++;
 		}
-		i++;
+	i++;
 	}
-	i = 1;
-	while (i < argc)
+	k = 1;
+	while (k < argc)
 	{
-		ft_printstr(argv[i]);
+		ft_printstr(argv[k]);
 		ft_printstr("\n");
-		i++;
+		k++;
 	}
 	return (0);
 }
